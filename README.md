@@ -12,7 +12,14 @@
  7. Save it as finalanswer.png
 
 ## The Story
-Funnily enough, if you look at my folder where I worked on this, I have 20 pictures, which included the answer, the input, and 18 different ideas I tried. I started off just trying to use edge detection for a few of those iterations but I wasn't sure how to zero in on the shape and was a little too stubborn to look it up. I then turned to color detection. The funny thing is, one of my earlier iterations of color detection gave me a very decent object detection device but I threw it out right away and started focusing more on the points because I kept trying to visualize it as a graph where each object was a point. I spent way too long trying to mess with it but I just couldn't get it to ignore the red door on the left. When I took a short break, I realized I already had the object detection thing so I threw out a couple hours of work and built off one of my earliest rejected ideas. I had the filter ignore boxes that are either too large or too small (took a little bit of brute forcing here) and I finally had it pretty close but for some reason, the algorithm I was using just refused to fit the line correctly (because of a couple of outliers. After a little while of trying to mess with it, I realized I could just use machine learning so I imported scikitlearn and used RANSAC to fit the lines and it immediately snapped into place.
+Funnily enough, if you peek into my project folder, you’ll find 20 pictures in there: the input image, the final answer, and a whopping 18 different versions where I was experimenting with ideas. At first, I went all in on edge detection, trying to make it work, but I couldn’t quite figure out how to zero in on the shape, and honestly, I was a little too stubborn to look up how to do it.
+So, I decided to switch gears to color detection. Ironically, one of my earliest attempts at color detection actually gave me a decent object detection system. But I tossed that aside because, for some reason, I was obsessed with treating it like a graph where each cone was a point. Naturally, I spent way too long trying to force this approach to work, but no matter how I messed with it, I couldn’t stop the algorithm from getting confused by the red door on the left.
+After taking a short break and clearing my head, I realized I already had a working object detection setup. So, I basically threw out a couple of hours of work and decided to go back to my original idea. I added a filter to ignore boxes that were too large or too small. But then the line-fitting algorithm kept messing up because of some annoying boxes in the back. After trying to mess with the line fitting a bit, I turned to machine learning and used RANSAC to fit the lines.
+
+
+
+
+
 
 ## Libraries
 I used three libraries: cv2, numpy, and scikitlearn
